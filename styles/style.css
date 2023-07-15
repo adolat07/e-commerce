@@ -1,0 +1,339 @@
+/* Google web fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,900;1,500;1,700&display=swap');
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #1d1d1d;
+}
+
+h6 {
+    color: #D8D8D8;
+}
+
+button {
+    padding: 13px 30px;
+    font-size: .8rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    color: aliceblue;
+    background-color: #1d1d1d;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease;
+}
+
+button:hover {
+    background-color: #3a3833;
+}
+
+hr {
+    width: 30px;
+    height: 2px;
+    background-color: #fb774b;
+}
+
+.star {
+    padding: 10px 0;
+}
+
+.star i {
+    font-size: .8rem;
+    color: goldenrod;
+}
+
+/* Navbar Styles */
+
+.navbar {
+    font-size: 16px;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    padding: 0;
+    color: black;
+    transition: .3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar i:hover,
+.navbar-light .navbar-nav .nav-link.active .navbar i.active {
+    color: coral;
+}
+
+.navbar i {
+    font-size: 1.2rem;
+    padding: 0 7px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+/* Mobile Nav */
+.navbar-light .navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+#bar {
+    padding: 7px;
+    font-size: 1.5rem;
+    color: black;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+#bar:hover,
+#bar.active {
+    color: #fff;
+}
+
+/* Media Style */
+@media only screen and (max-width: 991px) {
+
+    body>nav>div>button:hover,
+    body>nav>div>button:focus {
+        background-color: #fb774b;
+    }
+
+    body>nav>div>button:hover #bar,
+    body>nav>div>button:focus #bar {
+        color: #fff;
+    }
+
+    #navbarSupportedContent>ul {
+        margin: 1rem;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    #navbarSupportedContent>ul>li:nth-child(n)>a {
+        padding: 10px 0;
+    }
+}
+
+/* Intro Styles */
+#home {
+    width: 100%;
+}
+
+#home span {
+    color: coral;
+}
+
+.intro {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("../img/back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top 60px center;
+}
+
+.news .first img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.news .first .details {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .3s ease;
+}
+
+.news .first:hover .details {
+    background-color: rgba(245, 178, 178, .7);
+    cursor: pointer;
+}
+
+.news .first .details button {
+    padding: 2.5px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2a2a2a;
+    background: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid #2a2a2a;
+    transform: translateY(70px);
+    transition: .3s ease;
+}
+
+.news .first .details button:hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.news .first:nth-child(1) .details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+}
+
+.news .first:nth-child(2) .details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+}
+
+.news .first:nth-child(3) .details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: start;
+}
+
+.product {
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.product img {
+    transition: .3s all;
+}
+
+.product:hover img {
+    opacity: .7;
+}
+
+.product .buy-btn {
+    background-color: #fb774b;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: .3s all;
+}
+
+.product:hover .buy-btn {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.banner {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("../img/banner/2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top 60px center;
+    background-attachment: fixed;
+}
+
+.banner h4 {
+    color: #D8D8D8;
+}
+
+.banner h1 {
+    color: #fff;
+}
+
+.banner button {
+    background-color: #fb774b;
+}
+
+#footer {
+    background-color: #222222;
+}
+
+#footer h5 {
+    color: #D8D8D8;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+#footer li {
+    padding-bottom: 4px;
+}
+
+#footer li a {
+    font-size: .8rem;
+    color: #999999;
+}
+
+#footer li a:hover {
+    color: #D8D8D8;
+}
+
+#footer p {
+    color: #999999;
+    font-size: .8rem;
+}
+
+#footer .copyright a {
+    width: 38px;
+    height: 38px;
+    margin: 0 5px;
+    display: inline-block;
+    color: #000;
+    background-color: #ffffff;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    transition: .3s ease;
+}
+
+#footer .copyright a:hover {
+    color: #ffffff;
+    background-color: #fb774b;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    max-height: 560px;
+    box-sizing: border-box;
+    object-fit: cover;
+}
